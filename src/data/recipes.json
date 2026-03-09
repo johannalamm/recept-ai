@@ -1,0 +1,31 @@
+[
+  {
+    "id": "tikka-masala-pa-bonor",
+    "name": "Tikka masala på bönor",
+    "intro": "Serveras med ris eller liknande. Tillbehör: creme fraiche, cashewnötter, lime.",
+    "tags": ["middag", "indiskt","vegetariskt"],
+    "servings": 2,
+    "ingredients": [
+      { "name": "Gul lök", "amount": 1, "unit": "st", "category": "frukt & grönt" },
+      { "name": "Vitlök", "amount": 2, "unit": "klyftor", "category": "frukt & grönt" },
+      { "name": "Morot", "amount": 1, "unit": "st", "category": "frukt & grönt" },
+      { "name": "Ingefära", "amount": 0.5, "unit": "cm", "category": "frukt & grönt" },
+      { "name": "Krossade tomater", "amount": 1, "unit": "burk", "category": "skafferi" },
+      { "name": "Kokosmjölk", "amount": 2.5, "unit": "dl", "category": "skafferi" },
+      { "name": "Grönsaksbuljong", "amount": 1, "unit": "tärning", "category": "kryddor & smaksättare" },
+      { "name": "Garam Masala", "amount": 3, "unit": "tsk", "category": "kryddor & smaksättare" },
+      { "name": "Svarta bönor", "amount": 400, "unit": "g", "category": "skafferi" }
+    ],
+    "steps": [
+      "Riv morot.",
+      "Hacka den gul lök.",
+      "Pressa vitlök.",
+      "Fräs allting i lite olja på låg värme.",
+      "Riv ingefära och lägg i pannan.",
+      "Häll i krossade tomater, koksmjölk, lite vatten och grönsaksbuljong.",
+      "Låt såsen puttra på låg värme i 10 minuter.",
+      "Mixa med stavmixer.",
+      "Häll i svarta bönor och garam masala."
+    ]
+  }
+]
