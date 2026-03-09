@@ -1,7 +1,7 @@
 {
-  "name": "Receptboken",
-  "short_name": "Receptboken",
-  "description": "Din digitala receptbok med inköpslista",
+  "name": "Kokbok",
+  "short_name": "Kokbok",
+  "description": "Jojos kokbok med inköpslista",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#59310C",

@@ -18,7 +18,7 @@
     ],
     "steps": [
       "Riv morot.",
-      "Hacka den gul lök.",
+      "Hacka gul lök.",
       "Pressa vitlök.",
       "Fräs allting i lite olja på låg värme.",
       "Riv ingefära och lägg i pannan.",
@@ -26,6 +26,99 @@
       "Låt såsen puttra på låg värme i 10 minuter.",
       "Mixa med stavmixer.",
       "Häll i svarta bönor och garam masala."
+    ]
+  },
+    {
+    "id": "pajdeg",
+    "name": "Pajdeg - grundrecept",
+    "intro": "Grundrecept till t.ex. spenatpaj & västerbottenpaj.",
+    "tags": ["middag", "paj"],
+    "servings": 4,
+    "ingredients": [
+      { "name": "Vetemjöl", "amount": 3, "unit": "dl", "category": "skafferi" },
+      { "name": "Smör", "amount": 125, "unit": "g", "category": "kött & mejeri" }
+    ],
+    "steps": [
+      "Skär smör i små bitar.",
+      "Nyp ihop mjöl och smör.",
+      "Tillsätt en matsked kallt vatten.",
+      "Tryck ut degen i en pajform. Nagga med gaffel. Låt vila i kylen i 30 minuter.",
+      "Sätt ugnen på 225°C",
+      "Förgrädda pajskalet mitt i ugnen i ca 10 minuter."
+    ]
+  },
+  {
+    "id": "spenatpaj",
+    "name": "Spenatpaj med ädelost",
+    "intro": "Går att göra vegetarisk (bara att skippa skinkan).",
+    "tags": ["middag", "paj"],
+    "servings": 4,
+    "ingredients": [
+      { "name": "Fryst bladspenat", "amount": 250, "unit": "g", "category": "frys" },
+      { "name": "Purjolök", "amount": 1, "unit": "st", "category": "frukt & grönt" },
+      { "name": "Vitlök", "amount": 1, "unit": "klyftor", "category": "frukt & grönt" },
+      { "name": "Ädelost", "amount": 150, "unit": "g", "category": "kött & mejeri" },
+      { "name": "Basturökt skinka", "amount": 120, "unit": "g", "category": "kött & mejeri" },
+      { "name": "Ägg", "amount": 3, "unit": "st", "category": "kött & mejeri" },
+      { "name": "Mjölk", "amount": 3, "unit": "dl", "category": "kött & mejeri" },
+      { "name": "Cayennepeppar", "amount": 0.5, "unit": "tsk", "category": "kryddor & smaksättare" }
+    ],
+    "steps": [
+      "Gör en pajdeg (följ pajdeg - grundrecept).",
+      "Sätt ugnen på 175°C",
+      "Stek spenaten på låg värme.",
+      "Pressa vitlök och rör i.",
+      "Hacka purjolök och ha i.",
+      "Hacka skinka och bryt ädelosten.",
+      "Blanda ner allting över pajdegen.",
+      "Vispa ägg, mjölk, salt och canyennepeppar. Häll över pajdegen.",
+      "Grädda mitt i ugnen i 35 minuter."
+    ]
+  },
+    {
+    "id": "vasterbottenpaj",
+    "name": "Västerbottenpaj",
+    "intro": "Servera med tångkaviar, finhackad rödlök och gräddfil.",
+    "tags": ["middag", "paj", "högtid", "vegetarisk"],
+    "servings": 2,
+    "ingredients": [
+      { "name": "Purjolök", "amount": 1, "unit": "st", "category": "frukt & grönt" },
+      { "name": "Västerbottenost", "amount": 400, "unit": "g", "category": "kött & mejeri" },
+      { "name": "Ägg", "amount": 3, "unit": "st", "category": "kött & mejeri" },
+      { "name": "Matgrädde", "amount": 3, "unit": "dl", "category": "kött & mejeri" }
+    ],
+    "steps": [
+      "Gör en pajdeg (följ pajdeg - grundrecept).",
+      "Sätt ugnen på 200°C",
+      "Hacka purjolök och lägg över pajdegen.",
+      "Riv västerbottenosten och lägg ovanpå pajdegen.",
+      "Vispa ägg och matlagningsgrädde. Häll över pajdegen.",
+      "Grädda lågt i ugnen i 35 minuter."
+    ]
+  },
+  {
+    "id": "sockerkaka",
+    "name": "Sockerkaka",
+    "intro": "Går att byta ut smör mot margarin eller rapsolja samt mjölk mot veganska alternativ.",
+    "tags": ["bakverk"],
+    "servings": 4,
+    "ingredients": [
+      { "name": "Ägg", "amount": 2, "unit": "st", "category": "kött & mejeri" },
+      { "name": "Socker", "amount": 2, "unit": "dl", "category": "skafferi" },
+      { "name": "Smör", "amount": 75, "unit": "g", "category": "kött & mejeri" },
+      { "name": "Mjölk", "amount": 1, "unit": "dl", "category": "kött & mejeri" },
+      { "name": "Vetemjöl", "amount": 2, "unit": "dl", "category": "skafferi" },
+      { "name": "Vaniljsocker", "amount": 2, "unit": "tsk", "category": "skafferi" },
+      { "name": "Bakpulver", "amount": 1, "unit": "tsk", "category": "skafferi" }
+    ],
+    "steps": [
+      "Sätt ugnen på 175°C",
+      "Vispa ägg och socker poröst.",
+      "Smält smör och värm upp tillsammans med mjölk.",
+      "Blanda mjöl, vaniljsocker och bakpulver.",
+      "Rör ihop allting",
+      "Grädda lågt i ugnen i 25 minuter.",
+      "Häll ett tunnt lager socker på toppen."
     ]
   }
 ]
