@@ -5,10 +5,10 @@
       </div>
       <div class="nav-links">
         <button class="nav-link ${t==="#/"||t===""?"active":""}" data-href="#/">
-          <span class="nav-icon">🏠</span> Recept
+          <span class="nav-icon">🏠</span><span class="nav-label"> Recept</span>
         </button>
         <button class="nav-link ${t.startsWith("#/shopping")?"active":""}" data-href="#/shopping">
-          <span class="nav-icon">🛒</span> Inköpslista
+          <span class="nav-icon">🛒</span><span class="nav-label"> Inköpslista</span>
           ${s>0?`<span class="nav-badge">${s}</span>`:""}
         </button>
       </div>
@@ -77,7 +77,7 @@
         <div class="empty-state-title">Receptet hittades inte</div>
         <p class="empty-state-text">Det verkar som att detta recept inte finns.</p>
       </div>
-    `,document.getElementById("back-btn").addEventListener("click",()=>{window.history.back()});return}let s=n.servings;const a=new Set;function i(){const p=n.image?`<img class="recipe-detail-image" src="${f(n.image)}" alt="${f(n.name)}" />`:`<div class="recipe-detail-image-placeholder">${re(n)}</div>`,k=n.tags.map(o=>`<span class="tag-pill">${f(o)}</span>`).join(""),c=n.ingredients.map(o=>({...o,amount:ae(o.amount,n.servings,s)}));t.innerHTML=`
+    `,document.getElementById("back-btn").addEventListener("click",()=>{window.history.back()});return}let s=n.servings;const a=new Set;function i(){const p=n.image?`<img class="recipe-detail-image" src="${f(n.image)}" alt="${f(n.name)}" />`:`<div class="recipe-detail-image-placeholder">${re(n)}</div>`,k=n.tags.map(c=>`<span class="tag-pill">${f(c)}</span>`).join(""),o=n.ingredients.map(c=>({...c,amount:ae(c.amount,n.servings,s)}));t.innerHTML=`
       <button class="back-btn" id="back-btn">← Alla recept</button>
 
       <div class="recipe-detail-header">
@@ -104,7 +104,7 @@
               <button class="servings-btn" id="servings-plus">+</button>
             </div>
             <div class="ingredients-list">
-              ${c.map(se).join("")}
+              ${o.map(se).join("")}
             </div>
             <button class="btn btn-primary add-to-shopping-btn" id="add-to-shopping">
               🛒 Lägg till i inköpslistan
@@ -115,21 +115,21 @@
         <section>
           <h2 class="section-title">Gör så här</h2>
           <ol class="steps-list">
-            ${n.steps.map((o,b)=>`
+            ${n.steps.map((c,b)=>`
               <li class="step-item ${a.has(b)?"step-done":""}" data-step="${b}">
                 <span class="step-number">${a.has(b)?"✓":b+1}</span>
-                <span class="step-text">${f(o)}</span>
+                <span class="step-text">${f(c)}</span>
               </li>
             `).join("")}
           </ol>
         </section>
       </div>
-    `,r(c)}function r(p){document.getElementById("back-btn").addEventListener("click",()=>{window.location.hash="#/"}),document.getElementById("servings-minus").addEventListener("click",()=>{s>1&&(s--,i())}),document.getElementById("servings-plus").addEventListener("click",()=>{s++,i()}),document.getElementById("add-to-shopping").addEventListener("click",()=>{q(n,p),oe(`"${n.name}" lades till i inköpslistan!`),v()}),document.querySelector(".steps-list").addEventListener("click",k=>{const c=k.target.closest(".step-item");if(!c)return;const o=Number(c.dataset.step);a.has(o)?(a.delete(o),c.classList.remove("step-done"),c.querySelector(".step-number").textContent=String(o+1)):(a.add(o),c.classList.add("step-done"),c.querySelector(".step-number").textContent="✓")})}i()}function se(e){const t=ie(e.amount);return`
+    `,r(o)}function r(p){document.getElementById("back-btn").addEventListener("click",()=>{window.location.hash="#/"}),document.getElementById("servings-minus").addEventListener("click",()=>{s>1&&(s--,i())}),document.getElementById("servings-plus").addEventListener("click",()=>{s++,i()}),document.getElementById("add-to-shopping").addEventListener("click",()=>{q(n,p),ce(`"${n.name}" lades till i inköpslistan!`),v()}),document.querySelector(".steps-list").addEventListener("click",k=>{const o=k.target.closest(".step-item");if(!o)return;const c=Number(o.dataset.step);a.has(c)?(a.delete(c),o.classList.remove("step-done"),o.querySelector(".step-number").textContent=String(c+1)):(a.add(c),o.classList.add("step-done"),o.querySelector(".step-number").textContent="✓")})}i()}function se(e){const t=ie(e.amount);return`
     <div class="ingredient-item">
       <span class="ingredient-name">${f(e.name)}</span>
       <span class="ingredient-amount">${t} ${f(e.unit)}</span>
     </div>
-  `}function ae(e,t,n){const s=e/t*n,a=Math.pow(10,Math.floor(Math.log10(s||1)));return Math.round(s/a*20)/20*a}function ie(e){if(Number.isInteger(e))return String(e);const t=[[.25,"¼"],[.5,"½"],[.75,"¾"],[.333,"⅓"],[.667,"⅔"]],n=e%1,s=Math.floor(e);for(const[a,i]of t)if(Math.abs(n-a)<.04)return s>0?`${s} ${i}`:i;return e.toFixed(1).replace(/\.0$/,"")}function re(e){const t={pasta:"🍝",fisk:"🐟",frukost:"🌅",veganskt:"🌱",vegetariskt:"🥦",gryta:"🍲",middag:"🍽️",fika:"☕",barn:"👶"};for(const n of e.tags)if(t[n])return t[n];return"🍳"}function oe(e){let t=document.querySelector(".toast");t||(t=document.createElement("div"),t.className="toast",document.body.appendChild(t)),t.textContent=e,t.classList.add("show"),setTimeout(()=>t.classList.remove("show"),3e3)}function f(e){return e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;")}const T=["frukt & grönt","bröd","kött & mejeri","frys","skafferi","kryddor & smaksättare","barn","hygien"],O={"frukt & grönt":"🥦",bröd:"🍞","kött & mejeri":"🥩",frys:"❄️",skafferi:"🥫","kryddor & smaksättare":"🧂",barn:"👶",hygien:"🧼"};function h(){const e=document.getElementById("main"),t=u(),n=t.filter(r=>!r.checked),s=t.filter(r=>r.checked),a=pe(n),i=t.length===0?`<div class="shopping-empty empty-state">
+  `}function ae(e,t,n){const s=e/t*n,a=Math.pow(10,Math.floor(Math.log10(s||1)));return Math.round(s/a*20)/20*a}function ie(e){if(Number.isInteger(e))return String(e);const t=[[.25,"¼"],[.5,"½"],[.75,"¾"],[.333,"⅓"],[.667,"⅔"]],n=e%1,s=Math.floor(e);for(const[a,i]of t)if(Math.abs(n-a)<.04)return s>0?`${s} ${i}`:i;return e.toFixed(1).replace(/\.0$/,"")}function re(e){const t={pasta:"🍝",fisk:"🐟",frukost:"🌅",veganskt:"🌱",vegetariskt:"🥦",gryta:"🍲",middag:"🍽️",fika:"☕",barn:"👶"};for(const n of e.tags)if(t[n])return t[n];return"🍳"}function ce(e){let t=document.querySelector(".toast");t||(t=document.createElement("div"),t.className="toast",document.body.appendChild(t)),t.textContent=e,t.classList.add("show"),setTimeout(()=>t.classList.remove("show"),3e3)}function f(e){return e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;")}const T=["frukt & grönt","bröd","kött & mejeri","frys","skafferi","kryddor & smaksättare","barn","hygien"],O={"frukt & grönt":"🥦",bröd:"🍞","kött & mejeri":"🥩",frys:"❄️",skafferi:"🥫","kryddor & smaksättare":"🧂",barn:"👶",hygien:"🧼"};function h(){const e=document.getElementById("main"),t=u(),n=t.filter(r=>!r.checked),s=t.filter(r=>r.checked),a=pe(n),i=t.length===0?`<div class="shopping-empty empty-state">
         <span class="empty-state-icon">🛒</span>
         <div class="empty-state-title">Din inköpslista är tom</div>
         <p class="empty-state-text">Lägg till ingredienser från ett recept eller via formuläret ovan.</p>
@@ -142,7 +142,7 @@
         </div>
       </div>
       <div id="shopping-list">
-        ${T.filter(r=>a[r]&&a[r].length>0).map(r=>ce(r,a[r])).join("")}
+        ${T.filter(r=>a[r]&&a[r].length>0).map(r=>oe(r,a[r])).join("")}
       </div>`;e.innerHTML=`
     <div class="page-header">
       <h1 class="page-title">Inköpslista</h1>
@@ -183,7 +183,7 @@
     </div>
 
     ${i}
-  `,ue(),le()}function ce(e,t){return`
+  `,ue(),le()}function oe(e,t){return`
     <div class="shopping-category" data-category="${d(e)}">
       <div class="shopping-category-header">
         <span class="shopping-category-icon">${O[e]}</span>
@@ -225,4 +225,4 @@
   `}let $=null;function B(){const e=document.getElementById("undo-bar");if(e&&e.remove(),$&&clearTimeout($),Y()===0)return;const t=document.createElement("div");t.id="undo-bar",t.className="undo-bar",t.innerHTML=`
     <span>Ångra senaste åtgärd</span>
     <button class="undo-bar-btn" id="undo-btn">↩ Ångra</button>
-  `,document.body.appendChild(t),document.getElementById("undo-btn").addEventListener("click",()=>{const n=W();$&&clearTimeout($),t.remove(),n&&(n.type==="check"?j(n.item.id):n.type==="remove"&&D(n.item,n.index),v(),h())}),$=setTimeout(()=>t.remove(),5e3)}function le(){const e=document.getElementById("undo-bar");e&&e.remove()}function ue(){document.getElementById("add-item-form").addEventListener("submit",s=>{s.preventDefault();const a=document.getElementById("add-item-name"),i=document.getElementById("add-item-amount"),r=document.getElementById("add-item-unit"),p=document.getElementById("add-item-category"),k=a.value.trim();if(!k)return;const c=parseFloat(i.value)||0,o=r.value.trim(),b=p.value;K(k,c,o,b),v(),h()});const t=document.getElementById("shopping-list");t.addEventListener("change",s=>{const a=s.target.closest(".shopping-item-checkbox");if(!a)return;const i=a.dataset.id;if(a.checked){const r=P(i);r&&S({type:"check",item:r}),v(),h(),B()}else j(i),v(),h()}),t.addEventListener("click",s=>{const a=s.target.closest(".shopping-item-remove");if(!a)return;const i=a.dataset.id,r=U(i);r&&S({type:"remove",item:r.item,index:r.index}),v(),h(),B()}),t.addEventListener("change",s=>{const a=s.target.closest(".shopping-amount-input");if(!a)return;const i=a.dataset.id,r=parseFloat(a.value);!isNaN(r)&&r>=0&&G(i,r)}),t.addEventListener("change",s=>{const a=s.target.closest(".shopping-unit-input");if(!a)return;const i=a.dataset.id;F(i,a.value.trim())});const n=document.getElementById("clear-checked");n&&n.addEventListener("click",()=>{_(),v(),h()})}function pe(e){const t={};for(const n of e)t[n.category]||(t[n.category]=[]),t[n.category].push(n);return t}function d(e){return e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;")}function A(){const e=window.location.hash||"#/";v();const t=e.match(/^#\/recipe\/(.+)$/);if(t){ne(decodeURIComponent(t[1]));return}if(e==="#/shopping"){h();return}V()}window.addEventListener("hashchange",A);A();"serviceWorker"in navigator&&window.addEventListener("load",()=>{navigator.serviceWorker.register("./sw.js")});
+  `,document.body.appendChild(t),document.getElementById("undo-btn").addEventListener("click",()=>{const n=W();$&&clearTimeout($),t.remove(),n&&(n.type==="check"?j(n.item.id):n.type==="remove"&&D(n.item,n.index),v(),h())}),$=setTimeout(()=>t.remove(),5e3)}function le(){const e=document.getElementById("undo-bar");e&&e.remove()}function ue(){document.getElementById("add-item-form").addEventListener("submit",s=>{s.preventDefault();const a=document.getElementById("add-item-name"),i=document.getElementById("add-item-amount"),r=document.getElementById("add-item-unit"),p=document.getElementById("add-item-category"),k=a.value.trim();if(!k)return;const o=parseFloat(i.value)||0,c=r.value.trim(),b=p.value;K(k,o,c,b),v(),h()});const t=document.getElementById("shopping-list");t.addEventListener("change",s=>{const a=s.target.closest(".shopping-item-checkbox");if(!a)return;const i=a.dataset.id;if(a.checked){const r=P(i);r&&S({type:"check",item:r}),v(),h(),B()}else j(i),v(),h()}),t.addEventListener("click",s=>{const a=s.target.closest(".shopping-item-remove");if(!a)return;const i=a.dataset.id,r=U(i);r&&S({type:"remove",item:r.item,index:r.index}),v(),h(),B()}),t.addEventListener("change",s=>{const a=s.target.closest(".shopping-amount-input");if(!a)return;const i=a.dataset.id,r=parseFloat(a.value);!isNaN(r)&&r>=0&&G(i,r)}),t.addEventListener("change",s=>{const a=s.target.closest(".shopping-unit-input");if(!a)return;const i=a.dataset.id;F(i,a.value.trim())});const n=document.getElementById("clear-checked");n&&n.addEventListener("click",()=>{_(),v(),h()})}function pe(e){const t={};for(const n of e)t[n.category]||(t[n.category]=[]),t[n.category].push(n);return t}function d(e){return e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;")}function A(){const e=window.location.hash||"#/";v();const t=e.match(/^#\/recipe\/(.+)$/);if(t){ne(decodeURIComponent(t[1]));return}if(e==="#/shopping"){h();return}V()}window.addEventListener("hashchange",A);A();"serviceWorker"in navigator&&window.addEventListener("load",()=>{navigator.serviceWorker.register("./sw.js")});
