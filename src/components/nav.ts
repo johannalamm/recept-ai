@@ -13,10 +13,10 @@ export function renderNav(): void {
       </div>
       <div class="nav-links">
         <button class="nav-link ${hash === "#/" || hash === "" ? "active" : ""}" data-href="#/">
-          <span class="nav-icon">🏠</span> Recept
+          <span class="nav-icon">🏠</span><span class="nav-label"> Recept</span>
         </button>
         <button class="nav-link ${hash.startsWith("#/shopping") ? "active" : ""}" data-href="#/shopping">
-          <span class="nav-icon">🛒</span> Inköpslista
+          <span class="nav-icon">🛒</span><span class="nav-label"> Inköpslista</span>
           ${uncheckedCount > 0 ? `<span class="nav-badge">${uncheckedCount}</span>` : ""}
         </button>
       </div>
