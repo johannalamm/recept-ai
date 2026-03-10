@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Recipes",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "name", "intro", "tags", "servings", "ingredients", "steps"],
+    "additionalProperties": false,
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unikt ID i kebab-case, t.ex. 'tikka-masala-pa-bonor'"
+      },
+      "name": {
+        "type": "string"
+      },
+      "intro": {
+        "type": "string"
+      },
+      "tags": {
+        "type": "array",
+        "items": { "type": "string" },
+        "minItems": 1
+      },
+      "servings": {
+        "type": "number",
+        "minimum": 1
+      },
+      "image": {
+        "type": "string",
+        "description": "Valfri sökväg eller URL till bild"
+      },
+      "ingredients": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["name", "amount", "unit", "category"],
+          "additionalProperties": false,
+          "properties": {
+            "name": { "type": "string" },
+            "amount": { "type": "number", "exclusiveMinimum": 0 },
+            "unit": { "type": "string" },
+            "category": {
+              "type": "string",
+              "enum": [
+                "frukt & grönt",
+                "bröd",
+                "kött & mejeri",
+                "frys",
+                "skafferi",
+                "kryddor & smaksättare",
+                "barn",
+                "hygien"
+              ]
+            }
+          }
+        },
+        "minItems": 1
+      },
+      "steps": {
+        "type": "array",
+        "items": { "type": "string" },
+        "minItems": 1
+      }
+    }
+  }
+}

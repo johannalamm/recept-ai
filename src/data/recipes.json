@@ -3,7 +3,7 @@
     "id": "tikka-masala-pa-bonor",
     "name": "Tikka masala på bönor",
     "intro": "Serveras med ris eller liknande. Tillbehör: creme fraiche, cashewnötter, lime.",
-    "tags": ["middag", "indiskt","vegetariskt"],
+    "tags": ["middag", "indiskt","vegetariskt", "vardagsmat"],
     "servings": 2,
     "ingredients": [
       { "name": "Gul lök", "amount": 1, "unit": "st", "category": "frukt & grönt" },
@@ -32,7 +32,7 @@
     "id": "pajdeg",
     "name": "Pajdeg - grundrecept",
     "intro": "Grundrecept till t.ex. spenatpaj & västerbottenpaj.",
-    "tags": ["middag", "paj"],
+    "tags": ["paj"],
     "servings": 4,
     "ingredients": [
       { "name": "Vetemjöl", "amount": 3, "unit": "dl", "category": "skafferi" },
@@ -51,7 +51,7 @@
     "id": "spenatpaj",
     "name": "Spenatpaj med ädelost",
     "intro": "Går att göra vegetarisk (bara att skippa skinkan).",
-    "tags": ["middag", "paj"],
+    "tags": ["middag", "paj", "vardagsmat"],
     "servings": 4,
     "ingredients": [
       { "name": "Fryst bladspenat", "amount": 250, "unit": "g", "category": "frys" },
@@ -79,8 +79,8 @@
     "id": "vasterbottenpaj",
     "name": "Västerbottenpaj",
     "intro": "Servera med tångkaviar, finhackad rödlök och gräddfil.",
-    "tags": ["middag", "paj", "högtid", "vegetarisk"],
-    "servings": 2,
+    "tags": ["paj", "högtid", "vegetariskt"],
+    "servings": 4,
     "ingredients": [
       { "name": "Purjolök", "amount": 1, "unit": "st", "category": "frukt & grönt" },
       { "name": "Västerbottenost", "amount": 400, "unit": "g", "category": "kött & mejeri" },
@@ -119,6 +119,102 @@
       "Rör ihop allting",
       "Grädda lågt i ugnen i 25 minuter.",
       "Häll ett tunnt lager socker på toppen."
+    ]
+  },
+  {
+    "id": "cias-kladdkaka",
+    "name": "Cias kladdkaka",
+    "intro": "Mörk kladdkaka. Blir godast efter ett dygn i kylen.",
+    "tags": ["bakverk"],
+    "servings": 4,
+    "ingredients": [
+      { "name": "Ägg", "amount": 2, "unit": "st", "category": "kött & mejeri" },
+      { "name": "Socker", "amount": 1, "unit": "dl", "category": "skafferi" },
+      { "name": "Smör", "amount": 100, "unit": "g", "category": "kött & mejeri" },
+      { "name": "Vetemjöl", "amount": 1.5, "unit": "dl", "category": "skafferi" },
+      { "name": "Kakao", "amount": 4, "unit": "msk", "category": "skafferi" },
+      { "name": "Vaniljsocker", "amount": 2, "unit": "tsk", "category": "skafferi" }
+    ],
+    "steps": [
+      "Sätt ugnen på 150°C",
+      "Smält smör.",
+      "Blanda alla ingredienser + lite salt och häll i en bakform.",
+      "Grädda lågt i ugnen i 25 minuter."
+    ]
+  },
+  {
+    "id": "ellicas-kladdkaka",
+    "name": "Ellicas kladdkaka",
+    "intro": "Mer som en chokladtryffel. Fick receptet från kapsylens julmarknad. Servera med grädde.",
+    "tags": ["bakverk"],
+    "servings": 8,
+    "ingredients": [
+      { "name": "Margarin", "amount": 250, "unit": "g", "category": "kött & mejeri" },
+      { "name": "Blockchoklad", "amount": 300, "unit": "g", "category": "skafferi" },
+      { "name": "Socker", "amount": 2, "unit": "dl", "category": "skafferi" },
+      { "name": "Vaniljsocker", "amount": 1, "unit": "msk", "category": "skafferi" },
+      { "name": "Ägg", "amount": 4, "unit": "st", "category": "kött & mejeri" },
+      { "name": "Bryggkaffe", "amount": 4, "unit": "msk", "category": "skafferi" }
+    ],
+    "steps": [
+      "Sätt ugnen på 175°C",
+      "Smält margarin och blanda ner blockchokladen. Rör om så att smeten blir slät.",
+      "Blanda i övriga ingredienser.",
+      "Häll smeten i en form och grädda mitt i ugnen i 25 minuter.",
+      "Låt stå i kyl i 24h alternativt frys i 4h innan servering."
+    ]
+  },
+  {
+    "id": "raw-jordnotscurry",
+    "name": "Raw jordnötscurry med kokosris",
+    "intro": "Matig trots att den är raw.",
+    "tags": ["middag", "bjudmat", "veganskt", "raw"],
+    "servings": 4,
+    "ingredients": [
+      { "name": "Palsternacka", "amount": 2, "unit": "st", "category": "frukt & grönt" },
+      { "name": "Kokosflingor", "amount": 1.5, "unit": "dl", "category": "kryddor & smaksättare" },
+      { "name": "Agavesirap", "amount": 1, "unit": "tsk", "category": "skafferi" },
+      { "name": "Gurka", "amount": 0.5, "unit": "st", "category": "frukt & grönt" },
+      { "name": "Paprika", "amount": 1, "unit": "st", "category": "frukt & grönt" },
+      { "name": "Morot", "amount": 1, "unit": "st", "category": "frukt & grönt" },
+      { "name": "Koriander", "amount": 0.5, "unit": "dl", "category": "frukt & grönt" },
+      { "name": "Soltorkade tomater", "amount": 3, "unit": "st", "category": "skafferi" },
+      { "name": "Ingefära", "amount": 3, "unit": "cm", "category": "frukt & grönt" },
+      { "name": "Vitlök", "amount": 1, "unit": "klyftor", "category": "frukt & grönt" },
+      { "name": "Tamarisås", "amount": 2, "unit": "msk", "category": "kryddor & smaksättare" },
+      { "name": "Röd chili", "amount": 0.5, "unit": "st", "category": "frukt & grönt" },
+      { "name": "Jordnötssmör", "amount": 1, "unit": "dl", "category": "skafferi" },
+      { "name": "Gurkmeja", "amount": 0.5, "unit": "tsk", "category": "kryddor & smaksättare" },
+      { "name": "Lime", "amount": 2, "unit": "st", "category": "frukt & grönt" }
+    ],
+    "steps": [
+      "Ris: Kör palsternacka, kokosflingor, agavesirap och lite salt i en matberedare tills det ser ut som ris.",
+      "Sås: Mixa koriander, soltorkade tomater, ingefära, vitlök, tamarisås, chili, jordnötssmör, gurkmeja, limesaft och lite vatten till en slät sås.",
+      "Hacka gurka, paprika, morot och sockerärtor och blanda med såsen."
+    ]
+  },
+    {
+    "id": "jojos-granola",
+    "name": "Jojos granola",
+    "intro": "Min granola.",
+    "tags": ["brunch"],
+    "servings": 4,
+    "ingredients": [
+      { "name": "Hasselnötter", "amount": 60, "unit": "g", "category": "skafferi" },
+      { "name": "Fiberhavregryn", "amount": 4, "unit": "dl", "category": "skafferi" },
+      { "name": "Riven kokos", "amount": 1, "unit": "dl", "category": "skafferi" },
+      { "name": "Pumpafrön", "amount": 0.5, "unit": "dl", "category": "skafferi" },
+      { "name": "Hela linfrön", "amount": 0.5, "unit": "dl", "category": "skafferi" },
+      { "name": "Solroskärnor", "amount": 0.5, "unit": "dl", "category": "skafferi" },
+      { "name": "Honung", "amount": 0.5, "unit": "dl", "category": "skafferi" },
+      { "name": "Rapsolja", "amount": 0.5, "unit": "dl", "category": "skafferi" },
+      { "name": "Kanel", "amount": 1, "unit": "msk", "category": "kryddor & smaksättare" }
+    ],
+    "steps": [
+      "Sätt ugnen på 175°C",
+      "Hacka hasselnötterna och lägg dem på en plåt.",
+      "Häll över resten av alla ingredienser och blanda.",
+      "Lägg i ugnen i 10 minuter, ta ut och rör om och lägg in i ugnen i 13 minuter till."
     ]
   }
 ]
